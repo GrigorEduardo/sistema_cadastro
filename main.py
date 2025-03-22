@@ -3,7 +3,7 @@ from change_route import change_route
 
 def main(page: ft.Page):
 
-    def route_change(route):
+    def change(route):
 
         page.views.clear()
         page.views.append(
@@ -11,7 +11,7 @@ def main(page: ft.Page):
         )
         page.update()
 
-    page.on_route_change = route_change
+    page.on_route_change = change
     page.go('/')
 
 
